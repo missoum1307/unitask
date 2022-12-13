@@ -103,7 +103,7 @@ nav {
 
 #sherihan {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   color: rgb(242, 236, 236);
   border: white 1px solid;
   border-radius: 25px;
@@ -121,7 +121,7 @@ nav {
 /*album bilder*/
 
 .cover {
-  grid-column: 5 / span 2;
+  grid-column: 5 / span 7;
   position: relative;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -160,7 +160,7 @@ nav {
 /*sånglista lådorna*/
 
 .song_list {
-  grid-column: 5 / span 2;
+  grid-column: 5 / span 7;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -219,12 +219,11 @@ nav {
 /*anecdotes*/
 
 .anecdotes {
-  /* grid-auto-columns: auto; */
-  grid-column: 1 / span 6;
-  grid-row: 3;
+  grid-column: 1 / span 7;
+  grid-row: 3/4;
   gap: 10px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   padding-left: 0px;
   margin-top: 10px;
   color: rgb(27, 25, 25);
@@ -238,21 +237,39 @@ nav {
   padding: 20px;
 }
 
+.top_right_90 {
+  grid-column: 1/2;
+  align-items: center;
+}
+
+.empty {
+  grid-column: 2;
+  grid-row: 1;
+  opacity: 0;
+}
+
+.image {
+  width: 100%;
+}
+
 .box1 {
   grid-column: 1;
   background-color: rgb(129, 74, 74);
   border-radius: 25px 0 25px 25px;
 }
 
-.box3 {
-  grid-column: 3/5;
-  background-color: rgb(129, 74, 74);
-  border-radius: 25px 0 25px 25px;
+.box2 {
+  width: 70%;
+  grid-column: 3 / span 4;
 }
 
-.box5 {
-  grid-column: 5;
-  border-radius: 25px 0 25px 25px;
+.box3 {
+  grid-column: 5 / span 5;
+  border-radius: 0 25px 25px 25px;
+}
+
+.box4 {
+  grid-column: 7;
 }
 
 .image_1 {
@@ -261,27 +278,60 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   align-items: end;
+  width: 85%;
   color: rgb(129, 74, 74);
   text-shadow: 1px 1px 2px black;
 }
 
-.box6 {
-  grid-column: 6;
-  background-color: rgb(129, 74, 74);
-  border-radius: 25px 0 25px 25px;
+.bottom_right_90 {
+  border-radius: 25px 25px 0 25px;
+  color: rgb(27, 25, 25);
+  align-items: center;
 }
 
-.row2Box1 {
+.two_wide {
+  border-radius: 25px 25px 25px 0;
+  background-color: rgb(129, 74, 74);
+  grid-column: 3 / 7;
+  grid-row: 1;
+  color: rgb(27, 25, 25);
+  align-items: center;
+  padding: 10px;
+}
+
+.bottom_right_90 {
+  background-color: rgb(129, 74, 74);
+  border-radius: 25px 25px 0 25px;
+  color: rgb(27, 25, 25);
+  align-items: center;
+  grid-column: 7;
+  grid-row: 1;
+}
+
+.top_left_90 {
+  grid-row: 1;
+  grid-column: 6;
+  align-items: center;
   background-color: rgb(133, 122, 122);
-  grid-column: 1 / span 2;
+}
+
+.lada1 {
+  background-color: rgb(133, 122, 122);
+  grid-column: 1 / span 3;
   border-radius: 25px 25px 25px 0;
   margin-top: 20px;
 }
 
-.row2Box3 {
+.lada2 {
   background-color: rgb(133, 122, 122);
-  grid-column: 3;
-  border-radius: 25px 25px 25px 0;
+  grid-column: 4;
+  margin-top: 20px;
+  border-radius: 0 25px 25px 25px;
+}
+
+.lada4 {
+  grid-column: 7;
+  background-color: rgb(133, 122, 122);
   margin-top: 20px;
 }
 
@@ -293,24 +343,17 @@ nav {
   border-radius: 0 25px 25px 25px;
   background-repeat: no-repeat;
   align-items: end;
-
+  width: 55%;
   color: rgb(129, 74, 74);
   text-shadow: 1px 1px 2px black;
-  grid-column: 4 / span 2;
-
-  margin-top: 20px;
-}
-
-.row2Box6 {
-  background-color: rgb(133, 122, 122);
-  grid-column: 6;
-  border-radius: 25px 25px 25px 0;
+  grid-column: 5 / span 5;
+  grid-row: 1;
   margin-top: 20px;
 }
 
 #naagnool {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   color: rgb(242, 236, 236);
   border: white 1px solid;
   border-radius: 25px;
@@ -322,4 +365,7 @@ nav {
 
 h1 {
   font-family: bungeeoutline;
+}
+
+h2 {
 }
