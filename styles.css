@@ -1,0 +1,325 @@
+@font-face {
+  font-family: bungeeoutline;
+  src: url(BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+  font-family: barlowsemicondensed;
+  src: url(BarlowSemiCondensed-Light.ttf);
+}
+
+body {
+  background-image: url(images/cherrie1\(1\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: barlowsemicondensed;
+  background-color: grey;
+  margin: 0;
+}
+
+.bakgrund {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin: 70px auto;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 80px;
+  color: white;
+}
+
+footer {
+  color: white;
+  margin-left: 10px;
+}
+
+/*navigations knappar*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin: 50px auto;
+  margin-bottom: 70px;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgba(116, 116, 116, 0.5);
+  width: 25%;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar:first-of-type {
+  cursor: pointer;
+  color: black;
+  background-color: rgba(225, 211, 211, 0.3);
+}
+
+.navbar:nth-of-type(3) {
+  cursor: pointer;
+  color: black;
+  background-color: rgba(225, 211, 211, 0.3);
+}
+
+.navbar:nth-of-type(4) {
+  cursor: pointer;
+  color: black;
+  background-color: rgba(225, 211, 211, 0.3);
+}
+
+.navbar:hover {
+  background-color: rgba(116, 116, 116, 0.5);
+}
+
+.marked {
+  color: black;
+  padding: 12px 0;
+  font-weight: 900;
+  border: 1px solid white;
+  box-shadow: 0 0 10px white;
+}
+
+/*album lådor*/
+
+.album_description {
+  text-align: left;
+}
+
+#sherihan {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: rgb(242, 236, 236);
+  border: white 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.album_data {
+  grid-column: 1 / span 4;
+  margin-right: 20px;
+}
+
+/*album bilder*/
+
+.cover {
+  grid-column: 5 / span 2;
+  position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.firstcover:hover {
+  background-size: cover;
+}
+
+.show_hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.show_not_hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.show_not_hover:hover {
+  opacity: 1;
+}
+
+/*sånglista lådorna*/
+
+.song_list {
+  grid-column: 5 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: rgb(27, 25, 25);
+}
+
+.side-one {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 25px;
+  background-color: rgb(129, 74, 74);
+  margin-top: -10px;
+  font-size: smaller;
+  padding: 10px 0 10px 0;
+}
+
+.side-two {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 25px 0;
+  background-color: rgb(129, 74, 74);
+  margin-top: -10px;
+  font-size: smaller;
+  text-align: start;
+  padding: 10px 0 10px 0;
+}
+
+.side-three {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 25px;
+  background-color: rgb(133, 122, 122);
+  margin-top: 10px;
+  font-size: smaller;
+  text-align: start;
+}
+
+.side-four {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 25px 0;
+  background-color: rgb(133, 122, 122);
+  margin-top: 10px;
+  font-size: smaller;
+  text-align: start;
+}
+
+.song_list h2 {
+  margin-left: 7px;
+}
+
+.song_list ul {
+  list-style: conic-gradient;
+}
+
+/*anecdotes*/
+
+.anecdotes {
+  /* grid-auto-columns: auto; */
+  grid-column: 1 / span 6;
+  grid-row: 3;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-left: 0px;
+  margin-top: 10px;
+  color: rgb(27, 25, 25);
+  margin-top: 40px;
+}
+
+.anecdotes li {
+  font-weight: bold;
+  height: 30vh;
+  display: flex;
+  padding: 20px;
+}
+
+.box1 {
+  grid-column: 1;
+  background-color: rgb(129, 74, 74);
+  border-radius: 25px 0 25px 25px;
+}
+
+.box3 {
+  grid-column: 3/5;
+  background-color: rgb(129, 74, 74);
+  border-radius: 25px 0 25px 25px;
+}
+
+.box5 {
+  grid-column: 5;
+  border-radius: 25px 0 25px 25px;
+}
+
+.image_1 {
+  background-image: url(images/cherriek27.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: end;
+  color: rgb(129, 74, 74);
+  text-shadow: 1px 1px 2px black;
+}
+
+.box6 {
+  grid-column: 6;
+  background-color: rgb(129, 74, 74);
+  border-radius: 25px 0 25px 25px;
+}
+
+.row2Box1 {
+  background-color: rgb(133, 122, 122);
+  grid-column: 1 / span 2;
+  border-radius: 25px 25px 25px 0;
+  margin-top: 20px;
+}
+
+.row2Box3 {
+  background-color: rgb(133, 122, 122);
+  grid-column: 3;
+  border-radius: 25px 25px 25px 0;
+  margin-top: 20px;
+}
+
+.image_2 {
+  background-image: url(images/cherriepontus.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 0 25px 25px 25px;
+  background-repeat: no-repeat;
+  align-items: end;
+
+  color: rgb(129, 74, 74);
+  text-shadow: 1px 1px 2px black;
+  grid-column: 4 / span 2;
+
+  margin-top: 20px;
+}
+
+.row2Box6 {
+  background-color: rgb(133, 122, 122);
+  grid-column: 6;
+  border-radius: 25px 25px 25px 0;
+  margin-top: 20px;
+}
+
+#naagnool {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: rgb(242, 236, 236);
+  border: white 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: bungeeoutline;
+}
